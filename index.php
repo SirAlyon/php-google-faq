@@ -64,10 +64,32 @@ $FAQs = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body class="">
+    <header>
+        <div class="top_head">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Google_logo_%282010-2013%29.svg/1280px-Google_logo_%282010-2013%29.svg.png" alt="">
+                <span class="logo_text">Privacy e Termini</span>
+            </div>
+            <div class="profile">
+
+                <i class="fa-solid fa-bars"></i>
+                <span class="user_profile">A</span>
+            </div>
+
+        </div>
+        <div class="bot_head">
+            <span>Introduzione</span>
+            <span>Norme sulla privacy</span>
+            <span>Termini di servizio</span>
+            <span>Tecnologie</span>
+            <span class="active">Domande frequenti</span>
+        </div>
+    </header>
     <div class="container px-5">
         <?php foreach ($FAQs as $key => $FAQ) : ?>
             <h3><?= $FAQ['question'] ?></h3>
@@ -75,14 +97,78 @@ $FAQs = [
         <?php endforeach; ?>
         <hr>
     </div>
+    <footer>
 
+    </footer>
 </body>
 
 </html>
 
 
 <style lang="scss">
+    header{
+        padding: 1rem 1rem 0 1rem;
+        border-bottom: 1px solid lightgray;
+        height: 108px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        background-color: white;
+    }
+    .top_head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    img{
+        max-width: 100%;
+    }
+    .logo{
+        display: flex;
+        /* align-items: center; */
+    }
+    .logo>img{
+        height: 40px;
+    }
+    .logo_text{
+        color: black;
+        font-size: 1.3rem;
+        margin-left: 0.5rem;
+        align-self: flex-start;
+    }
+    .profile{
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user_profile{
+        width: 30px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: gray;
+        color: white;
+        margin: 0 1rem;
+    }
+    .bot_head{
+        padding-top: 1rem;
+    }
 
+    .bot_head>span{
+        margin-right: 1rem;
+        display: inline-block;
+        height: 100%;
+        padding-bottom: 0.5rem;
+    }
+
+    .container{
+        margin-top: 150px;
+    }
     ol{
         padding-left: 1.5rem!important;
     }
@@ -97,5 +183,10 @@ $FAQs = [
     }
     a{
         text-decoration: none;
+    }
+
+    .active{
+        color: blue;
+        border-bottom: 3px solid blue;
     }
 </style>

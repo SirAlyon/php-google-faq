@@ -26,7 +26,7 @@ $FAQs = [
         <ol>
         <li>
             La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-            <ol>
+            <ol type=\"a\">
                 <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
                 <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li>
             </ol>
@@ -65,10 +65,11 @@ $FAQs = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 
-<body class="">
+<body>
     <header>
         <div class="top_head">
             <div class="logo">
@@ -90,103 +91,30 @@ $FAQs = [
             <span class="active">Domande frequenti</span>
         </div>
     </header>
-    <div class="container px-5">
+    <div class="container" style="margin-top: 150px">
         <?php foreach ($FAQs as $key => $FAQ) : ?>
             <h3><?= $FAQ['question'] ?></h3>
             <?= $FAQ['answer'] ?>
         <?php endforeach; ?>
-        <hr>
     </div>
     <footer>
+        <div class="container">
+            <div class="links">
+                <a href="">Google</a>
+                <a href="">Tutto su Google</a>
+                <a href="">Privacy</a>
+                <a href="">Termini</a>
+            </div>
+            <div class="lang">
+                <i class="fa-solid fa-globe"></i>
+                <select name="lang" id="">
+                    <option value="1" default>Italiano</option>
+                </select>
+            </div>
 
+        </div>
     </footer>
 </body>
 
 </html>
 
-
-<style lang="scss">
-    header{
-        padding: 1rem 1rem 0 1rem;
-        border-bottom: 1px solid lightgray;
-        height: 108px;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 50;
-        background-color: white;
-    }
-    .top_head{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    img{
-        max-width: 100%;
-    }
-    .logo{
-        display: flex;
-        /* align-items: center; */
-    }
-    .logo>img{
-        height: 40px;
-    }
-    .logo_text{
-        color: black;
-        font-size: 1.3rem;
-        margin-left: 0.5rem;
-        align-self: flex-start;
-    }
-    .profile{
-        color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .user_profile{
-        width: 30px;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: gray;
-        color: white;
-        margin: 0 1rem;
-    }
-    .bot_head{
-        padding-top: 1rem;
-    }
-
-    .bot_head>span{
-        margin-right: 1rem;
-        display: inline-block;
-        height: 100%;
-        padding-bottom: 0.5rem;
-    }
-
-    .container{
-        margin-top: 150px;
-    }
-    ol{
-        padding-left: 1.5rem!important;
-    }
-    p{
-        margin: 2rem 0;
-    }
-    h3{
-        margin-top: 5rem;
-    }
-    h4{
-        margin-top: 3.5rem;
-    }
-    a{
-        text-decoration: none;
-    }
-
-    .active{
-        color: blue;
-        border-bottom: 3px solid blue;
-    }
-</style>

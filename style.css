@@ -1,0 +1,127 @@
+header {
+    padding: 1rem 1rem 0 1rem;
+    border-bottom: 1px solid lightgray;
+    height: 108px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: white;
+}
+
+.top_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo {
+    display: flex;
+    /* align-items: center; */
+}
+
+.logo>img {
+    height: 40px;
+}
+
+.logo_text {
+    color: rgb(78, 78, 78);
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+    align-self: flex-start;
+}
+
+.profile {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_profile {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    color: white;
+    margin: 0 1rem;
+}
+
+.bot_head {
+    padding-top: 1rem;
+}
+
+.bot_head>span {
+    margin-right: 1rem;
+    display: inline-block;
+    height: 100%;
+    padding-bottom: 0.5rem;
+}
+
+
+ol {
+    padding-left: 1.5rem !important;
+}
+
+li{
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+p {
+    margin: 2rem 0;
+}
+
+h3 {
+    margin-top: 5rem;
+}
+
+h4 {
+    margin-top: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.active {
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+footer {
+    background-color: rgb(231, 229, 229);
+}
+
+footer>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(155, 155, 155);
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.fa-globe{
+    color: blue;
+}
+
+footer select{
+    width: 200px!important;
+    background-color: rgb(231, 229, 229);
+    border-radius: 0.4rem;
+    border: 1px solid gray;
+}
